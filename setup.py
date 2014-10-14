@@ -5,7 +5,7 @@ setup(
     version='0.1.0',
     author='Jochem Oosterveen',
     author_email='jochem@oosterveen.net',
-    packages=['EPP'],
+    packages=['epp'],
     description='Python EPP client',
     long_description=(
         "Python-EPP provides an interface to the Extensible Provisioning "
