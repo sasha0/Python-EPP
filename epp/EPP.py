@@ -216,6 +216,13 @@ class Domain(EPPObject):
         self.registrant = Contact(self.epp, res.find('domain:registrant').text)
         self.admin = Contact(self.epp, res.find('domain:contact', type='admin').text)
         self.tech = Contact(self.epp, res.find('domain:contact', type='tech').text)
+        self.ns = []
+        for ns in res.findAll('domain:hostobj'):
+            self.ns.append(ns.text)
+        fields = ['clid', 'crid', 'crdate', 'exdate']
+        for f in fields:
+            v = res.find('domain:%s' % f).text
+            setattr(self, f, v)
         return self
 
     def token(self):
