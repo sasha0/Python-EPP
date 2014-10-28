@@ -16,6 +16,7 @@ create = """<?xml version='1.0' encoding='UTF-8' standalone='no'?>
   <command>
     <create>
       <contact:create xmlns:contact="urn:ietf:params:xml:ns:contact-1.0">
+        <contact:id>TEST123-TST</contact:id>
         <contact:postalInfo type="loc">
           <contact:name>%(name)s</contact:name>
           <contact:org>%(org)s</contact:org>
